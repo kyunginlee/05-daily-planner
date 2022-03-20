@@ -1,28 +1,25 @@
-var timeDisplayEl = $('#time-display');
+// Handle time display change per second
+const timeDisplayEl = $('#time-display');
 function displayTime() {
-    var rightNow = moment().format('LLL');
+    const rightNow = moment().format('LLL');
     timeDisplayEl.text(rightNow);
   }
 
-// Handle collecting userInput values in localStorage and displaying
-
-  $(document).ready(function () {
-        keys = Object.keys(localStorage);
-    for (let i = 0; i < keys.length; i++) {
-        var value = localStorage.getItem(keys[i]);
-        var userInput = $("#" + keys[i]).find("textArea")
-        userInput.val(value);
-    }
-
-    $(".saveBtn").on("click", function (event) {
-        event.preventDefault();
-        console.log(this);
+// Handle button click event to save to localStorage 
+    $(".saveBtn").on("click", function (e) { 
         var value = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-
         localStorage.setItem(time, value);
     });
 
+    // Handle collecting userInput values in localStorage and displaying
+  $(document).ready(function () {
+    keys = Object.keys(localStorage);
+for (let i = 0; i < keys.length; i++) {
+    const value = localStorage.getItem(keys[i]);
+    const userInput = $("#" + keys[i]).find("textArea")
+    userInput.val(value);
+}
 
 // Handle colour change based on time change
         var currentHours = moment().hours();
