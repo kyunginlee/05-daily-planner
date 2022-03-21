@@ -3,10 +3,10 @@
 ::::::::::::::::::::::::::::
 
 ## Deployed web address 
-
+https://kyunginlee.github.io/05-daily-planner/
 
 ## Project Description
-The aim was to create a daily planner for the busy person with multiple events through the week, to assist with time management and provide the function of moving events around to optimise their week.
+The aim was to create a daily planner for the busy person with multiple events through the day, to assist with time management and provide the function of moving events around to optimise their week.
 
 ## Functionality
 WHEN the user opens the planner, the current day should be displayed at the top of the calendar.
